@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog con Asistente Virtual</title>
+  <link rel="stylesheet" href="estilos.css"/>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Animaciones con AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    section {
+      scroll-margin-top: 80px;
+    }
+  </style>
+</head>
+<body>
+  <header class="bg-dark text-white text-center p-4 shadow">
+    <h1 class="mb-0">Bienvenido a Mi Blog</h1>
+    <nav class="mt-3">
+      <ul class="nav justify-content-center">
+        <li class="nav-item"><a class="nav-link text-white" href="#inicio">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#blog">Blog</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#proyectos">Proyectos</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#habilidades">Habilidades</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container my-5">
+    <section id="inicio" class="mb-5" data-aos="fade-up">
+      <div class="card p-4">
+        <h2 class="text-primary">Inicio</h2>
+        <p>Este es un blog sobre tecnología, aprendizaje y creatividad. Incluye un asistente virtual para ayudarte con preguntas frecuentes.</p>
+        <img src="assets/portada.jpg" alt="Imagen destacada del blog" class="img-fluid rounded shadow mt-4" data-aos="zoom-in">
+      </div>
+    </section>
+
+    <section id="blog" class="mb-5" data-aos="fade-up">
+      <div class="card p-4">
+        <h2 class="text-primary">Entradas Recientes</h2>
+        <article class="border-start border-4 border-primary ps-3 mb-3">
+          <h3>¿Qué es la inteligencia artificial?</h3>
+          <p>La IA está revolucionando el mundo. Descubre cómo funciona y qué impacto tiene en nuestra vida diaria.</p>
+        </article>
+        <article class="border-start border-4 border-primary ps-3">
+          <h3>Consejos para aprender a programar</h3>
+          <p>Desde HTML hasta machine learning. Aquí tienes algunos recursos para empezar.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="proyectos" class="mb-5" data-aos="fade-up">
+      <div class="card p-4">
+        <h2 class="text-primary">Proyectos Destacados</h2>
+        <ul class="list-group">
+          <li class="list-group-item">Desarrollo de un asistente virtual con IA</li>
+          <li class="list-group-item">Sitio web personal en HTML, CSS y Bootstrap</li>
+          <li class="list-group-item">Sistema de reservas con JavaScript y Firebase</li>
+        </ul>
+        <div class="ratio ratio-16x9 mt-4" data-aos="fade-up">
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video de ejemplo" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="habilidades" class="mb-5" data-aos="fade-up">
+      <div class="card p-4">
+        <h2 class="text-primary">Habilidades Técnicas</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <ul>
+              <li><i class="fas fa-check-circle text-success"></i> HTML5 / CSS3 / Bootstrap</li>
+              <li><i class="fas fa-check-circle text-success"></i> JavaScript / jQuery</li>
+              <li><i class="fas fa-check-circle text-success"></i> Node.js / Express</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul>
+              <li><i class="fas fa-check-circle text-success"></i> Python / Flask</li>
+              <li><i class="fas fa-check-circle text-success"></i> OpenAI API / Dialogflow</li>
+              <li><i class="fas fa-check-circle text-success"></i> MySQL / Firebase</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="mb-5" data-aos="fade-up">
+      <div class="card p-4">
+        <h2 class="text-primary">Contacto</h2>
+        <form id="formularioContacto">
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre:</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" required />
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo:</label>
+            <input type="email" class="form-control" id="email" name="email" required />
+          </div>
+
+          <div class="mb-3">
+            <label for="mensaje" class="form-label">Mensaje:</label>
+            <textarea class="form-control" id="mensaje" name="mensaje" rows="3" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="mapa" class="mb-5" data-aos="fade-up">
+      <div class="card p-4">
+        <h2 class="text-primary">Ubicación</h2>
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12691.563300212956!2d-99.15265468206472!3d19.43260772600547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff34f5f0b5ef%3A0x15a40ff4e5a1b509!2sCentro%20Hist%C3%B3rico%2C%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX%2C%20M%C3%A9xico!5e0!3m2!1ses!2sus!4v1615938857743!5m2!1ses!2sus"
+          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <!-- Chatbot -->
+  <div id="chatbot"></div>
+
+  <footer class="bg-dark text-white text-center p-3">
+    <p class="mb-0">&copy; 2025 Mi Blog. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    AOS.init();
+
+    $(document).ready(function () {
+      $('#formularioContacto').on('submit', function (e) {
+        e.preventDefault();
+
+        const nombre = $('#nombre').val().trim();
+        const email = $('#email').val().trim();
+        const mensaje = $('#mensaje').val().trim();
+
+        if (!nombre || !email || !mensaje) {
+          alert('Por favor completa todos los campos.');
+          return;
+        }
+
+        const emailRegex = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
+        if (!emailRegex.test(email)) {
+          alert('Por favor ingresa un correo válido.');
+          return;
+        }
+
+        alert('¡Formulario enviado correctamente!');
+      });
+    });
+  </script>
+  <script src="chatbot.js"></script>
+</body>
+</html>
